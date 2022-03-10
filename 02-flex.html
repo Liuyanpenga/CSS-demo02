@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex布局运用</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    img{
+      max-width: 100%;
+    }
+    header{
+      background: #ce4b72;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo>img{
+      width: 120px;
+      vertical-align: middle;
+    }
+    nav>ul{
+      display: flex;
+      margin-right: 20px;
+      align-items: center;
+    }
+    nav>ul>li{
+      padding: 4px;
+    }
+    nav>ul>li>a{
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    ul>li>a>img{
+      width: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+    }
+    .content{
+      width: 1600px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+    aside,.ad{
+     background: #999;
+      height: 600px;
+      width: 400px;
+    }
+    main{
+      background: #666;
+      display: flex;
+      flex-grow: 1;
+    }
+    .imageList{
+      width: 1600px;
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 10px;
+    }
+    .x{
+      display: flex;
+      flex-wrap: wrap;  
+      margin-right: -25px;
+    }
+    .image{
+      outline: 1px solid rebeccapurple;
+      width: 300px;
+      height: 300px;
+      margin-right: 25px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="">
+    </div>
+    <nav>
+      <ul>
+        <li> <a href=""><img src="images/1.jpg" alt=""></a></li>
+        <li> <a href=""> 番剧</a></li>
+        <li> <a href=""> 漫话</a></li>
+        <li> <a href=""> 游戏</a></li>
+        <li> <a href=""> 关于</a></li>
+      </ul>
+    </nav>  
+    </header>
+    <div class="content">
+      <aside></aside>
+      <main></main>
+      <div class="ad"></div>
+    </div>
+    <div class="imageList">
+      <div class="x">
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+        <div class="image"></div>
+    </div>
+  </div>
+</body>
+</html>

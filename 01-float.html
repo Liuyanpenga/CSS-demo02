@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float布局运用</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    header{
+      background: #ce4b72;
+    }
+    .clearfix::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .logo{
+      float: left;
+    }
+    .logo>img{
+      width: 100px;
+      vertical-align: middle;
+    }
+    .search{
+      display: block;
+      border-radius: 2px;
+      background-color: #fff;
+      float: left;
+      margin-top: 15px;
+      margin-left: 750px;
+    }
+    .search-btn{
+      float: left;
+    }
+    nav{
+      float: right;
+      margin-right: 10px;
+    }
+    ul{
+      margin-top: 11px;
+    }
+    ul>li{
+      float: left;
+      margin: 5px ;
+    }
+    ul>li>a{
+      color: white;
+      text-decoration: none;
+    }
+    ul>li>a>img{
+      width: 40px;
+      border-radius: 50%;
+    }
+    .content{
+      width: 1600px;
+      /* margin: 0 auto;      不如下面的代码好 */
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    aside,.ad{
+      width: 400px;
+      height: 600px;
+      float: left;
+      background: #999;
+    }
+    .content>main{
+      width: 800px;
+      height: 600px;
+      float: left;
+      background: #ccc;
+    }
+    .imageList{
+      /* outline: 1px solid rebeccapurple; */
+      width: 1600px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .image{
+      outline: 1px solid red;
+      width: 300px;
+      height: 300px;
+      margin-right: 25px;
+      margin-bottom: 20px;
+      float: left;
+    }
+    .x{
+      margin-right: -25px; /* 在外面加包个div 再用负margin*/
+    }
+  </style>
+</head>
+<body>
+  <header class="clearfix">
+    <div class="logo clearfix">
+      <img src="images/logo.png" alt="">
+    </div>
+    <div class="search clearfix">
+      <!-- <input type="text"><input type="button" value="搜索"> -->
+    <div class="search-input">
+      <input type="text"><input type="button" value="搜索">
+    </div>
+    </div>
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li> <a href=""><img src="images/1.jpg" alt=""></a></li>
+        <li> <a href=""> 番剧</a></li>
+        <li> <a href=""> 漫话</a></li>
+        <li> <a href=""> 游戏</a></li>
+        <li> <a href=""> 关于</a></li>
+      </ul>
+    </nav>  
+  </header>
+    <div class="content clearfix">
+      <aside></aside>
+      <main></main>
+      <div class="ad"></div>
+    </div>
+<div class="imageList clearfix">
+  <div class="x clearfix">
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+    <div class="image"></div>
+  </div>
+</div>
+</body>
+</html>

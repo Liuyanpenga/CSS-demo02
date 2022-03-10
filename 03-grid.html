@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid布局运用</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .index{
+      display: grid;
+      min-height: 100vh;
+      grid-template-columns: 400px 800px 400px;
+      grid-template-rows: 60px auto 60px;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "header header header"
+      "aside main ad"
+      "footer footer footer";
+      
+    }
+    .index>*{
+      border: 1px solid pink;
+    }
+    header{
+      grid-area: header;
+    }
+    aside{
+      grid-area: aside ;
+    }
+    main{
+      grid-area: main;
+    }
+    .ad{
+      grid-area: ad;
+    }
+    footer{
+      grid-area: footer;
+    }
+    .container{
+      display: grid;
+      width: 800px;
+      height: 600px;
+      border: 1px solid red;
+      grid-template-columns: 100px 100px auto 100px;
+      grid-template-rows: 25% 120px auto;
+    }
+    .a,.b,.c,.d{
+      border: 1px solid black;
+    }
+    .a{
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    .b{
+      grid-column: 3 / 4;
+    }
+  </style>
+</head>
+<body>
+    <div class="index">
+      <header>header</header>
+      <aside>aside</aside>
+      <main>main</main>
+      <div class="ad">ad</div>
+      <footer>footer</footer>
+    </div>
+    <div class="container">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+      <div class="d"></div>
+    </div>
+    
+</body>
+</html>
